@@ -1,5 +1,8 @@
 <x-app title="home">
+    <x-slot name="heading">
+        Home
+    </x-slot>
 
-  home
+    Home
 
 </x-app>

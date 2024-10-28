@@ -1,5 +1,9 @@
 <x-app>
 
-  about
+    <x-slot name="heading">
+        About
+    </x-slot>
+
+    About
 
 </x-app>
