@@ -1,14 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
-Route::view('/', 'home');
-
-Route::view('/about', 'about');
-
-Route::view('/contact', 'contact');
-
-Route::view('/gallery', 'gallery');
+Route::get('/', Controllers\HomeController::class);
+Route::get('/about', [Controllers\AboutController::class, 'index']);
+Route::get('/contact', [Controllers\ContactController::class, 'index']);
+Route::get('/gallery', [Controllers\GalleryController::class, 'index']);
 
 // Route::view('/', 'welcome');
 
