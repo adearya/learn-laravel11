@@ -8,6 +8,7 @@ Route::get('/about', [Controllers\AboutController::class, 'index']);
 Route::get('/contact', [Controllers\ContactController::class, 'index']);
 Route::get('/gallery', [Controllers\GalleryController::class, 'index']);
 Route::get('/user', [Controllers\UserController::class, 'index']);
+Route::get('/user/create', [Controllers\UserController::class, 'create']);
 
 // Route::view('/', 'welcome');
 
