@@ -10,6 +10,7 @@ Route::get('/gallery', [Controllers\GalleryController::class, 'index']);
 Route::get('/users', [Controllers\UserController::class, 'index']);
 Route::get('/users/create', [Controllers\UserController::class, 'create']);
 Route::post('/users', [Controllers\UserController::class, 'store']);
+Route::get('/users/{user}', [Controllers\UserController::class, 'show']);
 
 // Route::view('/', 'welcome');
 

@@ -33,7 +33,12 @@ class UserController extends Controller
         'password' => ['required', 'min:8'],
       ]));
 
-
       return redirect('/users');
+    }
+
+    public function show(User $user) {
+      return view('users.show', [
+        'user' => $user,
+      ]);
     }
 }
