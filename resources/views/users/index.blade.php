@@ -32,7 +32,10 @@
             <x-table.td>{{ $user->email }}</x-table.td>
             <x-table.td>{{ $user->created_at->format('d M Y') }}</x-table.td>
             <x-table.td>
-              <a href="/users/{{ $user->id }}">View</a>
+              <div class="flex justify-end gap-x-2">
+                <a href="/users/{{ $user->id }}">View</a>
+                <a href="/users/{{ $user->id }}/edit">Edit</a>
+              </div>
             </x-table.td>
             {{-- <td>{{ $user->created_at->diffForHumans() }}</td> --}}
           </tr>

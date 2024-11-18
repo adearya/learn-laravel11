@@ -7,10 +7,13 @@ Route::get('/', Controllers\HomeController::class);
 Route::get('/about', [Controllers\AboutController::class, 'index']);
 Route::get('/contact', [Controllers\ContactController::class, 'index']);
 Route::get('/gallery', [Controllers\GalleryController::class, 'index']);
+
 Route::get('/users', [Controllers\UserController::class, 'index']);
 Route::get('/users/create', [Controllers\UserController::class, 'create']);
 Route::post('/users', [Controllers\UserController::class, 'store']);
 Route::get('/users/{user}', [Controllers\UserController::class, 'show']);
+Route::get('/users/{user}/edit', [Controllers\UserController::class, 'edit']);
+Route::put('/users/{user}', [Controllers\UserController::class, 'update']);
 
 // Route::view('/', 'welcome');
 
