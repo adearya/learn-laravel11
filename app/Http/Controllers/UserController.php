@@ -70,11 +70,17 @@ class UserController extends Controller
       return redirect('users');
     }
 
-    protected function requestValidated() {
-      return [
-        'name' => ['required', 'min:3', 'max:255', 'string'],
-        'email' => ['required', 'email'],
-        'password' => ['required', 'min:8'],
-      ];
+    public function destroy(User $user) {
+      $user->delete();
+
+      return redirect('users');
     }
+    // protected function requestValidated() {
+    //   return [
+    //     'name' => ['required', 'min:3', 'max:255', 'string'],
+    //     'email' => ['required', 'email'],
+    //     'password' => ['required', 'min:8'],
+    //   ];
+    // }
+    
 }

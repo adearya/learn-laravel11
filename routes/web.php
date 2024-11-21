@@ -14,7 +14,7 @@ Route::post('/users', [Controllers\UserController::class, 'store']);
 Route::get('/users/{user}', [Controllers\UserController::class, 'show']);
 Route::get('/users/{user}/edit', [Controllers\UserController::class, 'edit']);
 Route::put('/users/{user}', [Controllers\UserController::class, 'update']);
-
+Route::delete('/users/{user}', [Controllers\UserController::class, 'destroy']);
 // Route::view('/', 'welcome');
 
 // Route::get('/users', function() {
