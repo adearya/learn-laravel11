@@ -10,6 +10,10 @@ Route::get('/gallery', [Controllers\GalleryController::class, 'index']);
 
 Route::resource('users', Controllers\UserController::class);
 
+Route::get('/login', [Controllers\LoginController::class, 'loginForm'])->name('login')->middleware('guest');
+Route::post('/login', [Controllers\LoginController::class, 'authenticate'])->middleware('guest');
+
+Route::post('/logout', Controllers\LogoutController::class)->name('logout')->middleware('auth');
 // Route::get('/users', [Controllers\UserController::class, 'index']);
 // Route::get('/users/create', [Controllers\UserController::class, 'create']);
 // Route::post('/users', [Controllers\UserController::class, 'store']);

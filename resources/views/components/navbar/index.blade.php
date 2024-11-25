@@ -31,11 +31,26 @@
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <x-navbar.link href="/">Home</x-link>
-              <x-navbar.link href="/about">About</x-link>
-              <x-navbar.link href="/contact">Contact</x-link>
-              <x-navbar.link href="/gallery">Gallery</x-link>
-              <x-navbar.link href="/users">User</x-link>
+              <x-navbar.link href="/">Home</x-navbar.link>
+              <x-navbar.link href="/about">About</x-navbar.link>
+              <x-navbar.link href="/contact">Contact</x-navbar.link>
+              <x-navbar.link href="/gallery">Gallery</x-navbar.link>
+                <x-navbar.link href="/users">User</x-navbar.link>
+              @auth
+                <x-navbar.link href="#">
+                  {{ auth()->user()->name }}
+                </x-navbar.link>
+                <form action="{{ route('logout') }}" method="post">
+                  @csrf
+
+                  <x-button type="submit">
+                    Logout
+                  </x-button>
+                </form>
+              @else
+                <x-navbar.link href="/login">Login</x-navbar.link>
+              @endauth
+
             </div>
           </div>
         </div>
@@ -51,6 +66,7 @@
         <x-navbar.dropdown-link href="/contact">Contact</x-navbar.dropdown-link>
         <x-navbar.dropdown-link href="/gallery">Gallery</x-navbar.dropdown-link>
         <x-navbar.dropdown-link href="{{ route('users.index') }}">User</x-navbar.dropdown-link>
+        <x-navbar.dropdown-link href="{{ route('login') }}">Login</x-navbar.dropdown-link>
       </div>
     </div>
 </nav>
