@@ -8,13 +8,15 @@ Route::get('/about', [Controllers\AboutController::class, 'index']);
 Route::get('/contact', [Controllers\ContactController::class, 'index']);
 Route::get('/gallery', [Controllers\GalleryController::class, 'index']);
 
-Route::get('/users', [Controllers\UserController::class, 'index']);
-Route::get('/users/create', [Controllers\UserController::class, 'create']);
-Route::post('/users', [Controllers\UserController::class, 'store']);
-Route::get('/users/{user}', [Controllers\UserController::class, 'show']);
-Route::get('/users/{user}/edit', [Controllers\UserController::class, 'edit']);
-Route::put('/users/{user}', [Controllers\UserController::class, 'update']);
-Route::delete('/users/{user}', [Controllers\UserController::class, 'destroy']);
+Route::resource('users', Controllers\UserController::class);
+
+// Route::get('/users', [Controllers\UserController::class, 'index']);
+// Route::get('/users/create', [Controllers\UserController::class, 'create']);
+// Route::post('/users', [Controllers\UserController::class, 'store']);
+// Route::get('/users/{user}', [Controllers\UserController::class, 'show']);
+// Route::get('/users/{user}/edit', [Controllers\UserController::class, 'edit']);
+// Route::put('/users/{user}', [Controllers\UserController::class, 'update']);
+// Route::delete('/users/{user}', [Controllers\UserController::class, 'destroy']);
 // Route::view('/', 'welcome');
 
 // Route::get('/users', function() {

@@ -26,7 +26,7 @@ class UserController extends Controller
         'meta_page' => [
           'title' => 'Create user:',
           'method' => 'POST',
-          'url' => '/users',
+          'url' => route('users.store'),
           'submit_text' => 'Create'
         ]
       ]);
@@ -41,9 +41,11 @@ class UserController extends Controller
       //   'email' => ['required', 'email'],
       //   'password' => ['required', 'min:8'],
       // ]));
-      User::create($request->validate($this->requestValidated()));
+      // User::create($request->validate($this->requestValidated()));
+      User::create($request->validated());
 
-      return redirect('/users');
+      // return redirect('/users');
+      return to_route('users.index');
     }
 
     public function show(User $user) {
@@ -58,7 +60,7 @@ class UserController extends Controller
         'meta_page' => [
           'title' => 'Edit user:' . $user->name,
           'method' => 'PUT',
-          'url' => '/users/' . $user->id,
+          'url' => route('users.update' , $user->id),
           'submit_text' => 'Update'
         ]
       ]);
@@ -67,13 +69,15 @@ class UserController extends Controller
     public function update(UserRequest $request, User $user) {
       $user->update($request->validated());
 
-      return redirect('users');
+      // return redirect('users');
+      return to_route('users.index');
     }
 
     public function destroy(User $user) {
       $user->delete();
 
-      return redirect('users');
+      // return redirect('users');
+      return to_route('users.index');
     }
     // protected function requestValidated() {
     //   return [

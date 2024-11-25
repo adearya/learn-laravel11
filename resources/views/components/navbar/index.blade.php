@@ -50,7 +50,7 @@
         <x-navbar.dropdown-link href="/about">About</x-navbar.dropdown-link>
         <x-navbar.dropdown-link href="/contact">Contact</x-navbar.dropdown-link>
         <x-navbar.dropdown-link href="/gallery">Gallery</x-navbar.dropdown-link>
-        <x-navbar.dropdown-link href="/users">User</x-navbar.dropdown-link>
+        <x-navbar.dropdown-link href="{{ route('users.index') }}">User</x-navbar.dropdown-link>
       </div>
     </div>
 </nav>
