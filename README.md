@@ -125,11 +125,6 @@ Open a browser to see the output
 ```sh
 http://localhost:8000
 ```
-Enjoy with admin
-```sh
-Email: noah.reed@inbox.org
-Password: 123123123
-```
 <!-- add_usage -->
 
 
