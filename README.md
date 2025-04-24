@@ -45,9 +45,9 @@
 </p>
 
 ### Built With
-![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?logo=laravel&logoColor=white) <br />
-![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?logo=vuedotjs&logoColor=fff) <br />
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=white) <br />
+![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?logo=laravel&logoColor=white&style=for-the-badge) <br />
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?logo=vuedotjs&logoColor=fff&style=for-the-badge) <br />
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=white&style=for-the-badge) <br />
 <!-- add_built_with -->
 
 
